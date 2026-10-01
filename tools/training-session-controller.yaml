@@ -1,0 +1,30 @@
+name: "training-session-controller"
+description: "Dispatches and monitors mlagents-learn PyTorch training sessions."
+input_schema:
+  type: object
+  properties:
+    run_id:
+      type: string
+      description: "Unique identifier for the training session."
+    config_path:
+      type: string
+      description: "Path to the YAML training configuration file."
+    env_path:
+      type: string
+      description: "Path to the compiled Unity environment executable (optional for editor training)."
+    num_envs:
+      type: integer
+      description: "Number of concurrent environment instances to run."
+      default: 1
+    resume:
+      type: boolean
+      description: "Whether to resume from existing checkpoints."
+      default: false
+    torch_device:
+      type: string
+      description: "Device target for PyTorch tensors (cuda or cpu)."
+      enum: ["cuda", "cpu"]
+      default: "cuda"
+  required:
+    - run_id
+    - config_path

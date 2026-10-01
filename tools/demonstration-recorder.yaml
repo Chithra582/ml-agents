@@ -1,0 +1,19 @@
+name: "demonstration-recorder"
+description: "Captures and inspects recorded player trajectories for imitation training."
+input_schema:
+  type: object
+  properties:
+    demo_file_path:
+      type: string
+      description: "File path to the recorded .demo binary trajectory file."
+    action:
+      type: string
+      description: "Action to perform on demonstration data."
+      enum: ["inspect", "validate", "convert", "summarize"]
+    filter_failed_episodes:
+      type: boolean
+      description: "Whether to strip unsuccessful trajectories from the demonstration set."
+      default: true
+  required:
+    - demo_file_path
+    - action

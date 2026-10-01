@@ -1,0 +1,23 @@
+name: "curriculum-config-manager"
+description: "Defines and tracks curriculum difficulty stages and lesson progression criteria."
+input_schema:
+  type: object
+  properties:
+    behavior_name:
+      type: string
+      description: "Target behavior name within the Unity environment."
+    curriculum_file:
+      type: string
+      description: "Path to the curriculum configuration YAML file."
+    current_lesson:
+      type: integer
+      description: "Current active lesson index."
+    reward_threshold:
+      type: number
+      description: "Cumulative reward threshold required to advance to the next lesson."
+    min_lesson_length:
+      type: integer
+      description: "Minimum number of episodes required before advancing."
+  required:
+    - behavior_name
+    - curriculum_file

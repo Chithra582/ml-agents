@@ -1,0 +1,22 @@
+name: "environment-instance-scaler"
+description: "Manages concurrent multi-instance Unity environment executables and port bindings."
+input_schema:
+  type: object
+  properties:
+    base_port:
+      type: integer
+      description: "Starting network port for Unity IPC sockets."
+      default: 5005
+    num_instances:
+      type: integer
+      description: "Total number of concurrent simulation instances to spawn."
+    env_executable:
+      type: string
+      description: "Path to the built Unity standalone environment executable."
+    no_graphics:
+      type: boolean
+      description: "Whether to launch Unity instances in headless non-rendering mode."
+      default: true
+  required:
+    - num_instances
+    - env_executable

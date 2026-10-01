@@ -1,0 +1,22 @@
+name: "onnx-inference-exporter"
+description: "Exports trained PyTorch neural network checkpoints into optimized ONNX runtime graphs."
+input_schema:
+  type: object
+  properties:
+    checkpoint_path:
+      type: string
+      description: "Path to the PyTorch .pt or .pth policy checkpoint file."
+    output_onnx_path:
+      type: string
+      description: "Destination path for the exported ONNX model file."
+    opset_version:
+      type: integer
+      description: "ONNX operator set version to target."
+      default: 13
+    optimize_for_barracuda:
+      type: boolean
+      description: "Whether to optimize graph topology for Unity Sentis or Barracuda engine."
+      default: true
+  required:
+    - checkpoint_path
+    - output_onnx_path

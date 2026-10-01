@@ -1,0 +1,22 @@
+spec_version: "0.1.0"
+name: "unity-ml-agents-toolkit"
+version: "1.0.0"
+description: "Autonomous reinforcement learning orchestrator and simulation engine bridge for Unity ML-Agents environments."
+author: "Unity Technologies & OpenGAP Contributors"
+license: "Apache-2.0"
+metadata:
+  domain: "Developer Tools / Game AI & Reinforcement Learning"
+  category: "Developer Tools"
+  framework: "PyTorch & Unity ML-Agents C# SDK"
+  language: "Python, C#"
+skills:
+  - "ppo-sac-reinforcement-training"
+  - "curriculum-learning-orchestration"
+  - "imitation-learning-demonstration"
+  - "gym-pettingzoo-environment-adapter"
+tools:
+  - "training-session-controller"
+  - "curriculum-config-manager"
+  - "demonstration-recorder"
+  - "environment-instance-scaler"
+  - "onnx-inference-exporter"
