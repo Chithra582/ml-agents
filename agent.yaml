@@ -1,5 +1,5 @@
 spec_version: "0.1.0"
-name: "unity-ml-agents-toolkit"
+name: ml-agents
 version: "1.0.0"
 description: "Autonomous reinforcement learning orchestrator and simulation engine bridge for Unity ML-Agents environments."
 author: "Unity Technologies & OpenGAP Contributors"
